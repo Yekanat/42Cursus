@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 	game.mlx = mlx_init();
 	ft_up_img(&game);
 	game.win = mlx_new_window(game.mlx, game.cols * 64, game.rows * 64, \
-			"so_long by vzashev:\n * comet simulator *");
+			"so_long by athekkan - incoming baby shower");
 	ft_draw_map(&game);
 	mlx_key_hook(game.win, ft_move, &game);
 	mlx_hook(game.win, 17, 0, ft_close, &game);
