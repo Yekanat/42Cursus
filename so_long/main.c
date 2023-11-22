@@ -46,17 +46,17 @@ void	ft_up_img(t_so_long *game)
 	int	size;
 
 	game->player = \
-	mlx_xpm_file_to_image(game->mlx, "skins/player.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/player.xpm", &size, &size);
 	game->wall = \
-	mlx_xpm_file_to_image(game->mlx, "skins/wall.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/wall.xpm", &size, &size);
 	game->floor = \
-	mlx_xpm_file_to_image(game->mlx, "skins/floor.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/floor.xpm", &size, &size);
 	game->escape = \
-	mlx_xpm_file_to_image(game->mlx, "skins/escape.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/escape.xpm", &size, &size);
 	game->coin = \
-	mlx_xpm_file_to_image(game->mlx, "skins/coin.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/coin.xpm", &size, &size);
 	game->enemy = \
-	mlx_xpm_file_to_image(game->mlx, "skins/enemy.xpm", &size, &size);
+	mlx_xpm_file_to_image(game->mlx, "assets/enemy.xpm", &size, &size);
 }
 
 int	main(int argc, char **argv)
