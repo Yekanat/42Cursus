@@ -6,42 +6,11 @@
 /*   By: athekkan <athekkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:56:51 by athekkan          #+#    #+#             */
-/*   Updated: 2024/04/18 16:00:02 by athekkan         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:14:22 by athekkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosopher.h"
-
-/*
- * Function: msg
- * -------------
- * Prints a message related to a philosopher's action.
- *
- * philo: Pointer to the philosopher performing the action.
- * str: The message to be printed.
- */
-void	msg(t_philo *philo, char *str)
-{
-	u_int64_t	time;
-
-	time = get_time() - philo->env->start_time;
-	if (philo->is_alive || philo->env->number_of_philosophers == 1)
-		printf("%lu %d %s\n", time, philo->id + 1, str);
-}
-
-/*
- * Function: single_simp
- * ----------------------
- * Simulates a single philosopher's action.
- *
- * env: Pointer to the symposium environment.
- */
-void	single_simp(t_env *env)
-{
-	msg(&env->table[0], FORK);
-	philo_usleep(env->time_to_die);
-	env->table[0].is_alive = 0;
-}
 
 /*
  * Function: ft_atoi

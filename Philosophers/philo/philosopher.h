@@ -6,7 +6,7 @@
 /*   By: athekkan <athekkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:56:19 by athekkan          #+#    #+#             */
-/*   Updated: 2024/04/18 14:42:32 by athekkan         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:29:59 by athekkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ u_int64_t	get_time(void);
 void		philo_usleep(int ms);
 void		msg(t_philo *philo, char *str);
 void		single_simp(t_env *env);
+void		*routine(void *data);
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   routine.c                                          :+:      :+:    :+:   */
+/*   philo_routine.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athekkan <athekkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:56:58 by athekkan          #+#    #+#             */
-/*   Updated: 2024/04/18 16:09:24 by athekkan         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:30:31 by athekkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,38 +134,4 @@ void	*routine(void *data)
 		}
 	}
 	return ((void *) 0);
-}
-
-/*
- * Function: stream
- * -----------------
- * Starts the simulation stream for all philosophers.
- * This function initiates the simulation stream
- * by creating and joining threads for each philosopher.
- *
- * env: Pointer to the symposium environment.
- *
- * Returns: 0 if successful, 1 otherwise.
- */
-int	stream(t_env *env)
-{
-	int	i;
-
-	i = 0;
-	while (i < env->number_of_philosophers)
-	{
-		if (pthread_create(&env->table[i].philo, NULL,
-				&routine, &env->table[i]))
-			return (1);
-		i++;
-	}
-	i = 0;
-	while (i < env->number_of_philosophers)
-	{
-		if (pthread_join(env->table[i].philo, NULL))
-			return (1);
-		i++;
-	}
-	free(env->table);
-	return (0);
 }
